@@ -1,0 +1,39 @@
+<!-- eslint-disable vue/multi-word-component-names -->
+<script setup>
+import { ref, onMounted } from 'vue';
+import axios from 'axios';
+import SectionTitle from './SectionTitle.vue';
+const certificates = ref([]);
+onMounted(async () => {
+try { const response = await axios.get('http://localhost:3000/api/certificates'); certificates.value
+= response.data; } catch (error) { console.error(error); }
+});
+</script>
+
+<template>
+  <section id="sertifikat" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+      <SectionTitle title="Sertifikat Saya" />
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8">
+        <div
+          v-for="cert in certificates"
+          :key="cert.id"
+          class="rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition duration-300"
+        >
+          <a :href="cert.link" target="_blank" rel="noopener noreferrer">
+            <img
+              :src="cert.image"
+              :alt="cert.title"
+              class="w-full h-56 object-cover"
+            />
+          </a>
+          <div class="p-4 bg-gray-50">
+            <h3 class="text-lg font-semibold text-gray-800">{{ cert.title }}</h3>
+            <p class="text-sm text-gray-500">{{ cert.issuer }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>

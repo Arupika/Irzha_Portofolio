@@ -10,17 +10,24 @@ try { const response = await axios.get('http://localhost:3000/api/skills'); skil
 });
 </script>
 <template>
-<section id="skill" class="py-20 bg-gray-50">
-<div class="container mx-auto px-6">
-<SectionTitle title="Keahlian & Teknologi" />
-<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-<div v-for="skill in skills" :key="skill.name" class="bg-white p-6 rounded-lg shadow-lg text-center
-transform hover:-translate-y-2 transition-transform duration-300">
-<h3 class="text-xl font-bold text-gray-800">{{ skill.name }}</h3>
-<p class="text-gray-500 mt-2">{{ skill.level }}</p>
+  <section id="skill" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <SectionTitle title="Keahlian & Teknologi" />
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+       <div
+  v-for="skill in skills"
+  :key="skill.id"
+  class="flex justify-center items-center transform transition duration-300 hover:scale-110 hover:rotate-1"
+>
+  <img
+    :src="skill.icon"
+    :alt="skill.name"
+    :title="skill.name"
+    class="w-14 h-14 md:w-16 md:h-16 object-contain transition duration-300 grayscale hover:grayscale-0"
+  />
+</div>
 
-</div>
-</div>
-</div>
-</section>
+      </div>
+    </div>
+  </section>
 </template>

@@ -12,7 +12,7 @@ response.data; } catch (error) { console.error(error); }
 <template>
 <section id="proyek" class="py-20 bg-white">
 <div class="container mx-auto px-6">
-<SectionTitle title="Proyek Unggulan" />
+<SectionTitle title="Project Unggulan" />
 <div class="grid md:grid-cols-2 gap-12">
 <div v-for="project in projects" :key="project.title" class="bg-gray-50 rounded-lg shadow-lg
 overflow-hidden">

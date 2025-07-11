@@ -4,9 +4,15 @@ import { ref, onMounted } from 'vue';
 import axios from 'axios';
 import SectionTitle from './SectionTitle.vue';
 const skills = ref([]);
+const API_URL = import.meta.env.PROD ? '/api/skills' :
+'http://localhost:3000/api/skills';
 onMounted(async () => {
-try { const response = await axios.get('http://localhost:3000/api/skills'); skills.value = response.data;
-} catch (error) { console.error(error); }
+try {
+const response = await axios.get(API_URL);
+skills.value = response.data;
+} catch (error) {
+console.error('Gagal mengambil data skills:', error);
+}
 });
 </script>
 <template>

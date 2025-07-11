@@ -12,7 +12,7 @@ try { const response = await axios.get('http://localhost:3000/api/education'); e
 <template>
 <section id="pendidikan" class="py-20 bg-white">
 <div class="container mx-auto px-6">
-<SectionTitle title="Riwayat Pendidikan" />
+<SectionTitle title="Education" />
 <div class="relative">
 <div class="absolute h-full border-r-2 border-gray-300" style="left: 50%;"></div>
 <div v-for="(edu, index) in educationHistory" :key="edu.id" class="mb-8 flex justify-between

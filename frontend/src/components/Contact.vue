@@ -11,7 +11,7 @@ const currentYear = ref(new Date().getFullYear());
     <div class="absolute inset-0 bg-gradient-to-br from-gray-900 to-gray-700 opacity-50 z-0"></div>
     <div class="container mx-auto px-6 text-center relative z-10">
       
-      <SectionTitle title="Hubungi Saya" textColor="text-white" /> 
+      <SectionTitle title="Contact Me" textColor="text-white" /> 
 
       <p class="text-lg text-gray-300 mb-6 max-w-2xl mx-auto">
         Jangan ragu untuk terhubung atau bertanya. Saya terbuka untuk kolaborasi dan peluang baru 😊.

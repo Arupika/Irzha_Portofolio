@@ -19,7 +19,7 @@ onMounted(async () => {
 <template>
   <section id="sertifikat" class="py-20 bg-white">
     <div class="container mx-auto px-6">
-      <SectionTitle title="Sertifikat Saya" />
+      <SectionTitle title="Certification" />
 
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8">
         <div

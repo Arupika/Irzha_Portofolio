@@ -14,6 +14,8 @@ app.get('/api/skills', (req, res) => res.json(skills));
 app.get('/api/projects', (req, res) => res.json(projects));
 app.get('/api/certificates', (req, res) => {res.json(certificates);});
 
+// Baris ini penting agar Vercel bisa menjalankan backend Anda
+module.exports = app;
 
 app.listen(PORT, () => {
 console.log(` Server backend berjalan di http://localhost:${PORT}`);

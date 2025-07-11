@@ -3,10 +3,16 @@
 import { ref, onMounted } from 'vue';
 import axios from 'axios';
 import SectionTitle from './SectionTitle.vue';
+
 const certificates = ref([]);
+
 onMounted(async () => {
-try { const response = await axios.get('http://localhost:3000/api/certificates'); certificates.value
-= response.data; } catch (error) { console.error(error); }
+  try {
+    const response = await axios.get('http://localhost:3000/api/certificates');
+    certificates.value = response.data;
+  } catch (error) {
+    console.error(error);
+  }
 });
 </script>
 
@@ -21,17 +27,23 @@ try { const response = await axios.get('http://localhost:3000/api/certificates')
           :key="cert.id"
           class="rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition duration-300"
         >
-          <a :href="cert.link" target="_blank" rel="noopener noreferrer">
+          <!-- LINK AKTIF KE SERTIFIKAT -->
+          <a
+            :href="cert.link"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block"
+          >
             <img
               :src="cert.image"
               :alt="cert.title"
-              class="w-full h-56 object-cover"
+              class="w-full h-72 object-cover"
             />
+            <div class="p-4 bg-gray-50">
+              <h3 class="text-lg font-semibold text-gray-800">{{ cert.title }}</h3>
+              <p class="text-sm text-gray-500">{{ cert.issuer }}</p>
+            </div>
           </a>
-          <div class="p-4 bg-gray-50">
-            <h3 class="text-lg font-semibold text-gray-800">{{ cert.title }}</h3>
-            <p class="text-sm text-gray-500">{{ cert.issuer }}</p>
-          </div>
         </div>
       </div>
     </div>

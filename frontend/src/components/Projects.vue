@@ -10,7 +10,7 @@ response.data; } catch (error) { console.error(error); }
 });
 </script>
 <template>
-<section id="proyek" class="py-20 bg-white">
+<section id="proyek" class="py-20 bg-gray">
 <div class="container mx-auto px-6">
 <SectionTitle title="Project Unggulan" />
 <div class="grid md:grid-cols-2 gap-12">

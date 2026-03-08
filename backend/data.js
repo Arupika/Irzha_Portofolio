@@ -20,7 +20,7 @@
         period: "2016 - 2019",
       },
       {
-        id: 3,
+        id: 4,
         institution: "SDN 4 MENTENG PALANGKARAYA",
         major: "SD",
         period: "2010 - 2016",
@@ -49,7 +49,7 @@
         title: "Website Portfolio",
         description: "Website portofolio pribadi interaktif dengan Vue dan Tailwind CSS.",
         tech: ["Vue", "Tailwind", "Node.js"],
-        image : "/src/assets/PortofolioIMG.png",
+        image : "/PortofolioIMG.png",
         link: "https://github.com/Arupika/Irzha_Portofolio"
       },
       {
@@ -57,7 +57,7 @@
         title: "Website Wisata Kota Yogyakarta Dewiji",
         description: "Aplikasi untuk pemesanan tempat wisata dan rental mobil.",
         tech: ["Vue","Bootstrap", "Laravel", "MySQL"],
-        image : "/src/assets/Dewiji logo.png",
+        image : "/Dewiji logo.png",
         link: "https://github.com/Arupika/Dewiji"
       }
     ];
@@ -67,7 +67,7 @@
         id: 1,
         title: "CCNA: Introduction to Networks",
         issuer: "Network 1 Cisco",
-        image: "/src/assets/Sertifikat 1.jpg",
+        image: "/Sertifikat 1.jpg",
         link: "https://drive.google.com/file/d/1BprrYT9tI3aZVqXs4bdLTT3u6mo0jp4A/view?usp=sharing"
       },
       // Tambahkan sertifikat lainnya di sini

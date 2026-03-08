@@ -4,7 +4,10 @@ const cors = require('cors');
 const { educationHistory, skills, projects, certificates } = require('./data.js');
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: "https://irzha-portofolio.vercel.app", // Ganti dengan URL frontend Vercel kamu
+  methods: ["GET", "POST"]
+}));
 
 // Route API
 app.get('/api/education', (req, res) => res.json(educationHistory));

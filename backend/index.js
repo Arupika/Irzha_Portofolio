@@ -6,10 +6,17 @@ const { educationHistory, skills, projects, certificates } = require('./data.js'
 const app = express();
 app.use(cors());
 
+// Route API
 app.get('/api/education', (req, res) => res.json(educationHistory));
 app.get('/api/skills', (req, res) => res.json(skills));
 app.get('/api/projects', (req, res) => res.json(projects));
-app.get('/api/certificates', (req, res) => {res.json(certificates);});
+app.get('/api/certificates', (req, res) => res.json(certificates));
 
-// Baris ini penting agar Vercel bisa menjalankan backend Anda
+// --- TAMBAHKAN KODE DI BAWAH INI ---
+const PORT = 3000;
+app.listen(PORT, () => {
+    console.log(`Server nyala di http://localhost:${PORT}`);
+});
+
+// Tetap simpan ini untuk kebutuhan Vercel nanti
 module.exports = app;

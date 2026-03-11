@@ -4,14 +4,14 @@
         institution: "Universitas Amikom Yogyakarta",
         major: "S1 Teknik Informatika",
         period: "2023 - Sekarang",
-        description: "Mempelajari pengembangan web, basis data, dan UI/UX."
+        description: "Mempelajari Pengembangan Website, Basis Data, UI/UX, dan Artificial Intelligence."
       },
       {
         id: 2,
         institution: "SMA BUDI UTOMO PERAK JOMBANG",
         major: "MIPA",
         period: "2019 - 2022",
-        description: "Mondok sambil sekolah."
+        description: ""
       },
       {
         id: 3,
@@ -35,10 +35,10 @@
       { id: 5, name: "Laravel", level: 85, category: "Backend", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" },
       { id: 6, name: "MySQL", level: 85, category: "Database", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
       { id: 7, name: "JavaScript", level: 85, category: "Frontend", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
-      { id: 8, name: "Node.js", level: 75, category: "Backend", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+      //{ id: 8, name: "Node.js", level: 75, category: "Backend", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
       { id: 9, name: "Tailwind CSS", level: 80, category: "Frontend", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"},
       { id: 10, name: "Figma", level: 80, category: "Design", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
-      { id: 11, name: "Firebase", level: 70, category: "Backend", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" },
+      //{ id: 11, name: "Firebase", level: 70, category: "Backend", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" },
       { id: 12, name: "Postman", level: 75, category: "Tools", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" }
     ];
 

@@ -37,9 +37,8 @@ onMounted(() => {
 
       <!-- Deskripsi -->
       <p class="text-xl text-gray-600 mb-8 animate-slide-in-left" style="animation-delay: 400ms;">
-        Mahasiswa Teknik Informatika yang ingin menjadi seorang Full Stack Developer. Saya
-        sangat tertarik dalam pengembangan aplikasi web menggunakan teknologi seperti Vue.js, Laravel,
-        dan MySQL.
+        Mahasiswa Teknik Informatika yang ingin menjadi seorang Full Stack Developer dan seorang Data scientist. Saya
+        sangat tertarik dalam pengembangan aplikasi web dan juga pengolahan data untuk mendapatkan wawasan yang berharga. Saya selalu bersemangat untuk belajar teknologi baru
       </p>
 
       <!-- Tombol -->

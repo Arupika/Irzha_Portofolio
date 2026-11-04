@@ -1,49 +1,58 @@
 // backend/index.js
-const express = require('express');
-const cors = require('cors');
-const { educationHistory, skills, projects, certificates } = require('./data.js');
+require('dotenv').config()
 
-const app = express();
+const express = require('express')
+const cors = require('cors')
+const apiRoutes = require('./routes/api.js')
 
-// 1. Perbaikan CORS: Tambahkan konfigurasi yang lebih detail
-app.use(cors({
-  origin: ["https://irzha-portofolio.vercel.app", "http://localhost:5173"], 
-  methods: ["GET", "POST", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization"]
-}));
+const app = express()
 
-// 2. Middleware Tambahan (Sangat Penting untuk Vercel)
-// Ini untuk memastikan header Access-Control benar-benar terkirim
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "https://irzha-portofolio.vercel.app");
-  res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
-  res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
-  
-  // Tangani preflight request (OPTIONS)
-  if (req.method === "OPTIONS") {
-    return res.status(200).end();
-  }
-  next();
-});
+/**
+ * CORS diatur satu kali lewat middleware cors.
+ * Middleware manual yang menulis header Access-Control-* sengaja dihapus:
+ * dulunya dua sumber menulis origin berbeda sehingga header dobel dan bentrok.
+ */
+const allowedOrigins = (
+  process.env.CORS_ALLOWED_ORIGINS ??
+  'https://irzha-portofolio.vercel.app,http://localhost:5173'
+)
+  .split(',')
+  .map((origin) => origin.trim())
+  .filter(Boolean)
 
-// Route API
-app.get('/api/education', (req, res) => res.json(educationHistory));
-app.get('/api/skills', (req, res) => res.json(skills));
-app.get('/api/projects', (req, res) => res.json(projects));
-app.get('/api/certificates', (req, res) => res.json(certificates));
+app.use(
+  cors({
+    origin: allowedOrigins,
+    methods: ['GET', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    maxAge: 600,
+  }),
+)
 
-// Root route untuk cek apakah backend hidup
 app.get('/', (req, res) => {
-  res.send('Backend Hall of Code is Running!');
-});
+  res.send('Irzha Portfolio API is running. See /api for available endpoints.')
+})
 
-// 3. Perbaikan app.listen (Agar tidak bentrok di Production)
-if (process.env.NODE_ENV !== 'production') {
-  const PORT = 3000;
-  app.listen(PORT, () => {
-    console.log(`Server nyala di http://localhost:${PORT}`);
-  });
+app.use('/api', apiRoutes)
+
+// Endpoint yang tidak dikenal → 404 JSON, bukan HTML default.
+app.use((req, res) => {
+  res.status(404).json({ error: 'Not Found', path: req.originalUrl })
+})
+
+// Handler error terpusat: respon seragam, stack trace tidak dibocorkan ke client.
+app.use((err, req, res, next) => {
+  if (res.headersSent) return next(err)
+  console.error(err)
+  res.status(err.status || 500).json({ error: 'Internal Server Error' })
+})
+
+// Di Vercel serverless fungsi yang diekspor dipakai; listen hanya untuk dev lokal.
+if (!process.env.VERCEL) {
+  const port = process.env.PORT || 3000
+  app.listen(port, () => {
+    console.log(`Server nyala di http://localhost:${port}`)
+  })
 }
 
-// WAJIB: Untuk Vercel Serverless
-module.exports = app;
+module.exports = app

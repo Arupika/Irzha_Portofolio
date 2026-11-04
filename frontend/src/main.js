@@ -1,11 +1,12 @@
 // src/main.js
-import './assets/main.css';
-import { createApp } from 'vue';
-import App from './App.vue';
-import router from './router';
-import animateOnScroll from './directives/animateOnScroll'; // <-- Impor
+import './assets/main.css'
+import { createApp } from 'vue'
 
-const app = createApp(App);
-app.directive('animate-on-scroll', animateOnScroll); // <-- Daftarkan
-app.use(router);
-app.mount('#app');
+import App from './App.vue'
+import router from './router'
+import reveal from './directives/reveal'
+
+const app = createApp(App)
+app.directive('reveal', reveal)
+app.use(router)
+app.mount('#app')

@@ -2,9 +2,9 @@
   <img
     src="/logo.png"
     alt=""
-    width="40"
-    height="40"
-    class="h-10 w-10 shrink-0 object-contain"
+    width="32"
+    height="32"
+    class="h-8 w-8 shrink-0 object-contain"
     aria-hidden="true"
   />
 </template>

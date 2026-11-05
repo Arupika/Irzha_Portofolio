@@ -47,7 +47,7 @@ const preview = ref(null)
       @close="preview = null"
     >
       <div v-if="preview">
-        <div class="card max-h-[58vh] overflow-auto bg-base p-2">
+        <div class="card max-h-[58vh] overflow-auto bg-night p-2">
           <ThumbImage :src="preview.image" :alt="preview.title" caption="CERT" />
         </div>
 

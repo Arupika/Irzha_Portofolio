@@ -18,11 +18,11 @@ import { aboutCards, aboutInterests, aboutIntro, profile } from '@/config/site'
 
       <div class="mt-12 grid gap-5 lg:grid-cols-12">
         <div v-reveal class="card p-6 md:p-8 lg:col-span-7">
-          <p class="text-base leading-relaxed text-dim">{{ profile.headline }}</p>
+          <p class="text-base leading-relaxed text-bright">{{ profile.headline }}</p>
           <p
             v-for="paragraph in aboutIntro"
             :key="paragraph"
-            class="mt-4 text-sm leading-relaxed text-dim md:text-base"
+            class="mt-4 text-sm leading-relaxed text-body md:text-base"
           >
             {{ paragraph }}
           </p>
@@ -40,7 +40,7 @@ import { aboutCards, aboutInterests, aboutIntro, profile } from '@/config/site'
                 <IconBase :name="interest.icon" />
               </span>
               <h3 class="text-sm font-semibold text-bright">{{ interest.title }}</h3>
-              <p class="mt-1.5 text-xs leading-relaxed text-dim md:text-sm">{{ interest.text }}</p>
+              <p class="mt-1.5 text-xs leading-relaxed text-body md:text-sm">{{ interest.text }}</p>
             </li>
           </ul>
         </div>
@@ -58,7 +58,7 @@ import { aboutCards, aboutInterests, aboutIntro, profile } from '@/config/site'
               <IconBase :name="card.icon" />
             </span>
             <div>
-              <p class="text-[10px] font-semibold uppercase tracking-widest text-dim/70">
+              <p class="text-[10px] font-semibold uppercase tracking-widest text-dim">
                 {{ card.label }}
               </p>
               <p class="mt-1 text-sm font-semibold leading-snug text-bright">{{ card.value }}</p>

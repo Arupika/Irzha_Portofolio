@@ -8,11 +8,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        base: '#080B14',
+        // Catatan: jangan beri nama token `base`, karena akan bertabrakan dengan
+        // utilitas font-size bawaan Tailwind `text-base` (warna ikut berubah).
+        night: '#080B14',
         raised: '#101625',
         card: '#151D2E',
         hair: '#212B3D',
         bright: '#F8FAFC',
+        body: '#CBD5E1', // teks paragraf — lebih terang dari `dim` agar tetap nyaman dibaca
         dim: '#94A3B8',
         brand: { light: '#60A5FA', DEFAULT: '#3B82F6', dark: '#2563EB' },
         violet: { light: '#A78BFA', DEFAULT: '#8B5CF6' },

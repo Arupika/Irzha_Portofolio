@@ -7,7 +7,7 @@ const year = new Date().getFullYear()
 </script>
 
 <template>
-  <footer class="border-t border-hair bg-base">
+  <footer class="border-t border-hair bg-night">
     <div class="shell py-12">
       <div class="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
         <div class="max-w-sm">
@@ -44,7 +44,7 @@ const year = new Date().getFullYear()
               target="_blank"
               rel="noopener noreferrer"
               :aria-label="social.label"
-              class="grid h-10 w-10 place-items-center rounded-xl border border-hair bg-card p-2.5 text-dim transition duration-300 hover:-translate-y-0.5 hover:border-brand/50 hover:text-brand-light"
+              class="grid h-10 w-10 place-items-center rounded-xl border border-hair bg-card p-2.5 text-body transition duration-300 hover:-translate-y-0.5 hover:border-brand/50 hover:text-brand-light"
             >
               <BrandIcon :name="social.key" :label="social.label" />
             </a>

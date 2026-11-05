@@ -42,7 +42,7 @@ onBeforeUnmount(() => {
   <Teleport to="body">
     <div
       v-if="props.open"
-      class="fixed inset-0 z-[80] flex items-start justify-center overflow-y-auto bg-base/80 p-4 backdrop-blur-sm animate-fade-in sm:p-6"
+      class="fixed inset-0 z-[80] flex items-start justify-center overflow-y-auto bg-night/80 p-4 backdrop-blur-sm animate-fade-in sm:p-6"
       @click.self="emit('close')"
     >
       <div

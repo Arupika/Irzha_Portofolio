@@ -88,7 +88,7 @@ const linkedin = socials.find((social) => social.key === 'linkedin')
           <img
             src="/Me.jpg"
             alt="Irzha Fahrizaldy"
-            class="h-full w-full rounded-full border-4 border-base object-cover"
+            class="h-full w-full rounded-full border-4 border-night object-cover"
             fetchpriority="high"
             decoding="async"
           />

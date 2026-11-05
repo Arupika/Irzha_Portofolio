@@ -20,7 +20,7 @@ const isPlaceholder = computed(() => !props.src || failed.value)
 <template>
   <div
     v-if="isPlaceholder"
-    class="flex h-full w-full items-center justify-center bg-gradient-to-br from-raised via-card to-base"
+    class="flex h-full w-full items-center justify-center bg-gradient-to-br from-raised via-card to-night"
     role="img"
     :aria-label="props.alt"
   >

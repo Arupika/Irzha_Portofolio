@@ -26,7 +26,7 @@ function selectSection(id) {
     :class="[
       'sticky top-0 z-50 transition-all duration-300',
       scrolled || menuOpen
-        ? 'border-b border-hair bg-base/80 backdrop-blur-xl'
+        ? 'border-b border-hair bg-night/80 backdrop-blur-xl'
         : 'border-b border-transparent bg-transparent',
     ]"
   >
@@ -85,7 +85,7 @@ function selectSection(id) {
       </button>
     </nav>
 
-    <div v-show="menuOpen" id="mobile-menu" class="border-t border-hair bg-base/95 lg:hidden">
+    <div v-show="menuOpen" id="mobile-menu" class="border-t border-hair bg-night/95 lg:hidden">
       <ul class="shell flex flex-col gap-1 py-4">
         <li v-for="section in sections" :key="section.id">
           <a

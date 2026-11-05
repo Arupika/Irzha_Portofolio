@@ -24,7 +24,7 @@ defineEmits(['preview'])
         <ThumbImage :src="certificate.image" :alt="certificate.title" caption="CERT" />
       </div>
       <span
-        class="absolute inset-0 flex items-end justify-center bg-base/70 opacity-0 transition duration-300 group-hover:opacity-100"
+        class="absolute inset-0 flex items-end justify-center bg-night/70 opacity-0 transition duration-300 group-hover:opacity-100"
       >
         <span
           class="mb-4 inline-flex items-center gap-2 rounded-lg border border-hair bg-card px-3 py-1.5 text-xs font-semibold text-bright"

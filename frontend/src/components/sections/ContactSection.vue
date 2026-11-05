@@ -83,14 +83,14 @@ async function copyEmail() {
                 class="group flex items-center gap-4 py-4 transition"
               >
                 <span
-                  class="grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-hair bg-card p-2.5 text-dim transition group-hover:border-brand/50 group-hover:text-brand-light"
+                  class="grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-hair bg-card p-2.5 text-body transition group-hover:border-brand/50 group-hover:text-brand-light"
                 >
                   <BrandIcon v-if="channel.brand" :name="channel.icon" :label="channel.label" />
                   <IconBase v-else :name="channel.icon" />
                 </span>
                 <span class="min-w-0">
                   <span
-                    class="block text-[11px] font-semibold uppercase tracking-widest text-dim/70"
+                    class="block text-[11px] font-semibold uppercase tracking-widest text-dim"
                   >
                     {{ channel.label }}
                   </span>

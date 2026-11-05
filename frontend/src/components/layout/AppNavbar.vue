@@ -38,7 +38,7 @@ function selectSection(id) {
         aria-label="Irzha Fahrizaldy — back to top"
         @click="selectSection('home')"
       >
-        <SiteLogo class="transition group-hover:opacity-80" />
+        <SiteLogo class="transition group-hover:border-brand/70" />
         <span class="hidden text-sm font-semibold tracking-tight text-bright sm:block">
           {{ profile.name }}
         </span>

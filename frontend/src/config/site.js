@@ -6,7 +6,6 @@
 
 export const profile = {
   name: 'Irzha Fahrizaldy',
-  initials: 'IF',
   role: 'Full Stack Developer',
   greeting: 'Hello, I am',
   headline: 'Building functional, maintainable, and user-focused web applications.',

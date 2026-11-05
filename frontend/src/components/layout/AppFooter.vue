@@ -1,6 +1,7 @@
 <script setup>
 import BrandIcon from '@/components/ui/BrandIcon.vue'
 import IconBase from '@/components/ui/IconBase.vue'
+import SiteLogo from '@/components/ui/SiteLogo.vue'
 import { profile, sections, socials } from '@/config/site'
 
 const year = new Date().getFullYear()
@@ -12,11 +13,7 @@ const year = new Date().getFullYear()
       <div class="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
         <div class="max-w-sm">
           <a href="#home" class="flex items-center gap-3">
-            <span
-              class="grid h-10 w-10 place-items-center rounded-xl border border-brand/40 bg-brand/10 font-mono text-sm font-bold text-brand-light"
-            >
-              {{ profile.initials }}
-            </span>
+            <SiteLogo />
             <span class="text-sm font-semibold text-bright">{{ profile.name }}</span>
           </a>
           <p class="mt-4 text-sm leading-relaxed text-dim">{{ profile.headline }}</p>

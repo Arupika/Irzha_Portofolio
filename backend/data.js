@@ -53,8 +53,8 @@ const projects = [
     status: 'In Progress',
     role: 'Full Stack Developer / Project Developer',
     image: null, // Screenshot belum tersedia — jangan memakai gambar palsu untuk perangkat lunak nyata.
-    repository: null, // Isi saat repositori boleh dipublikasikan.
-    liveDemo: null,
+    repository: 'https://github.com/Arupika/mytra-pos-system',
+    liveDemo: 'https://pos-app.kjamytra.com/',
     description:
       'Mytra POS is a multi-branch Point of Sale application designed to support retail sales operations, cashier activities, transaction management, and branch-based access control.',
     tech: ['Laravel', 'PHP', 'MySQL', 'JavaScript', 'REST API', 'Laravel Sanctum'],

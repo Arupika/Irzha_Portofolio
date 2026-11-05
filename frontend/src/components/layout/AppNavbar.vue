@@ -2,6 +2,7 @@
 <script setup>
 import { ref } from 'vue'
 import IconBase from '@/components/ui/IconBase.vue'
+import SiteLogo from '@/components/ui/SiteLogo.vue'
 import { useActiveSection } from '@/composables/useActiveSection'
 import { useScrolled } from '@/composables/useScrolled'
 import { profile, sections } from '@/config/site'
@@ -37,11 +38,7 @@ function selectSection(id) {
         aria-label="Irzha Fahrizaldy — back to top"
         @click="selectSection('home')"
       >
-        <span
-          class="grid h-10 w-10 place-items-center rounded-xl border border-brand/40 bg-brand/10 font-mono text-sm font-bold text-brand-light transition group-hover:border-brand"
-        >
-          {{ profile.initials }}
-        </span>
+        <SiteLogo class="transition group-hover:border-brand/70" />
         <span class="hidden text-sm font-semibold tracking-tight text-bright sm:block">
           {{ profile.name }}
         </span>

@@ -9,6 +9,12 @@
     scroll-padding-top: 5.5rem;
   }
 
+  /* Glow dekoratif keluar dari batas section; cegah halaman bisa digeser ke samping. */
+  html,
+  body {
+    overflow-x: clip;
+  }
+
   body {
     @apply bg-night font-sans text-bright antialiased;
   }

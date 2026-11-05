@@ -80,7 +80,7 @@ const groups = computed(() => {
                 class="group flex flex-col items-center gap-2 rounded-xl border border-hair bg-raised/70 p-3 transition duration-300 hover:-translate-y-1 hover:border-brand/40"
               >
                 <span
-                  class="h-4 w-4 opacity-70 grayscale transition duration-300 group-hover:opacity-100 group-hover:grayscale-0"
+                  class="h-6 w-6 opacity-70 grayscale transition duration-300 group-hover:opacity-100 group-hover:grayscale-0"
                 >
                   <TechIcon :slug="skill.icon" :name="skill.name" />
                 </span>

@@ -22,7 +22,7 @@ const preview = ref(null)
       <SectionTitle
         eyebrow="Certificates"
         title="Credentials & coursework"
-        lead="Certifications I have completed.<br />Click on a certificate to view the details."
+        lead="Certifications I have completed. \n Click a certificate to view details."
       />
 
       <div class="mt-12">

@@ -10,7 +10,7 @@ const educationHistory = [
     major: 'S1 Teknik Informatika',
     period: '2023 - Sekarang',
     description:
-      'Mempelajari Pengembangan Website, Basis Data, UI/UX, dan Artificial Intelligence.',
+      'Studying website development, databases, UI/UX, and artificial intelligence.',
   },
   {
     id: 2,

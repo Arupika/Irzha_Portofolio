@@ -52,9 +52,7 @@ const year = new Date().getFullYear()
       <div
         class="mt-10 flex flex-col items-center justify-between gap-4 border-t border-hair pt-6 sm:flex-row"
       >
-        <p class="text-xs text-dim/70">
-          &copy; {{ year }} {{ profile.name }}. Built with Vue 3, Tailwind CSS &amp; Express.
-        </p>
+        <p class="text-xs text-dim/70">&copy; {{ year }} {{ profile.name }}.</p>
         <a
           href="#home"
           class="inline-flex items-center gap-2 text-xs font-semibold text-dim transition hover:text-brand-light"

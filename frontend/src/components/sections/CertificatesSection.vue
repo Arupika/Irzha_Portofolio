@@ -12,6 +12,8 @@ import { useResource } from '@/composables/useResource'
 
 const { items, status, reload } = useResource('certificates')
 const preview = ref(null)
+
+const lead = 'Certifications I have completed.\nClick a certificate to view details.'
 </script>
 
 <template>
@@ -22,7 +24,7 @@ const preview = ref(null)
       <SectionTitle
         eyebrow="Certificates"
         title="Credentials & coursework"
-        lead="Certifications I have completed. \n Click a certificate to view details."
+        :lead="lead"
       />
 
       <div class="mt-12">

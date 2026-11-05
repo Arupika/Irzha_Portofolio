@@ -79,11 +79,11 @@ const groups = computed(() => {
                 :key="skill.name"
                 class="group flex flex-col items-center gap-2 rounded-xl border border-hair bg-raised/70 p-3 transition duration-300 hover:-translate-y-1 hover:border-brand/40"
               >
-                <TechIcon
-                  :slug="skill.icon"
-                  :name="skill.name"
-                  class="h-8 w-8 opacity-70 grayscale transition duration-300 group-hover:opacity-100 group-hover:grayscale-0"
-                />
+                <span
+                  class="h-4 w-4 opacity-70 grayscale transition duration-300 group-hover:opacity-100 group-hover:grayscale-0"
+                >
+                  <TechIcon :slug="skill.icon" :name="skill.name" />
+                </span>
                 <span
                   class="text-center text-[11px] font-semibold uppercase tracking-wide text-dim transition group-hover:text-brand-light"
                 >

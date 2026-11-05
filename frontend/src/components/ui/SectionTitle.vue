@@ -15,6 +15,6 @@ defineProps({
       v-if="align === 'center'"
       class="mx-auto mt-4 h-1 w-20 rounded-full bg-gradient-to-r from-brand to-violet"
     />
-    <p v-if="lead" class="mt-5 text-base leading-relaxed text-dim md:text-lg">{{ lead }}</p>
+    <p v-if="lead" class="mt-5 whitespace-pre-line text-base leading-relaxed text-dim md:text-lg">{{ lead }}</p>
   </header>
 </template>

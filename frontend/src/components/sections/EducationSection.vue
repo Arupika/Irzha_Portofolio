@@ -15,7 +15,7 @@ const isInProgress = (entry) => /sekarang|present|\(now\)/i.test(entry.period ??
     <div class="shell">
       <SectionTitle
         eyebrow="Education"
-        title="Learning path, in order"
+        title="Learning path"
         lead="My schooling from primary school to university, including the study focus I am working on now."
       />
 

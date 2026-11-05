@@ -22,7 +22,7 @@ const preview = ref(null)
       <SectionTitle
         eyebrow="Certificates"
         title="Credentials & coursework"
-        lead="Certifications I have completed. The list is read from the API, so adding a certificate only means adding one entry in the backend."
+        lead="Certifications I have completed.<br />Click on a certificate to view the details."
       />
 
       <div class="mt-12">

@@ -70,8 +70,7 @@ async function copyEmail() {
         <div v-reveal class="card p-6 md:p-8 lg:col-span-7">
           <h3 class="text-lg font-bold text-bright">Direct channels</h3>
           <p class="mt-2 text-sm leading-relaxed text-dim">
-            There is no fake form that only prints a success message. Every link below opens the
-            real app (email, WhatsApp, LinkedIn, GitHub) pre-filled with your message.
+            You can reach me with the following channels. 
           </p>
 
           <ul class="mt-6 divide-y divide-hair">
